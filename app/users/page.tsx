@@ -1,20 +1,23 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
 import Link from 'next/link'
-const UsersPage = async () => {
-
-    const res = await fetch ('https://jsonplaceholder.typicode.com/users')
-    const users: User[] = await res.json()
+import UserTable from './UserTable'
 
 
-    console.log('this is the response',users)
 
+const UsersPage = () => {
+    // console.log('this is the response',users)
 
   return (<>
     <div>This is the Users Page !</div>
-     <h4>Following are the Users!</h4>
-     <h6>{users.map((user)=>(<> <li>{user.name}</li></>))}</h6>
-  
+    <h2>{new Date().toLocaleTimeString()}</h2>
+    
+    <UserTable/>
+
+     <Link href='/users/new'>
+      <button className=' mt-4 btn btn-secondary'>Go to the nested users page!</button>
+     </Link>
+
     </>
 
     

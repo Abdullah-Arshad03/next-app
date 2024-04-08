@@ -5,9 +5,11 @@ import AddToCart from './AddToCart'
 
 const ProductCard = () => {
   return (<>
-    <div>This is the react component the normal component which we create and then export it into any other page </div>
+    <div className='mr-10 border border-black'>This is the react component the normal component which we create and then export it into any other page 
+    <h5 className='m-4'> product Card</h5>
     <AddToCart></AddToCart>
     <br />
+    </div>
 
     </>
   )
